@@ -16,6 +16,12 @@
 		756A76102564112B003B51FC /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756A760F2564112B003B51FC /* ChatViewController.storyboard */; };
 		756A761225641141003B51FC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761125641141003B51FC /* ChatViewController.swift */; };
 		756A761625641202003B51FC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761525641202003B51FC /* UIViewController+.swift */; };
+		756A761D256412D6003B51FC /* MyChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761B256412D6003B51FC /* MyChatTableViewCell.swift */; };
+		756A761E256412D6003B51FC /* MyChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756A761C256412D6003B51FC /* MyChatTableViewCell.xib */; };
+		756A7621256412E8003B51FC /* YourChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761F256412E8003B51FC /* YourChatTableViewCell.swift */; };
+		756A7622256412E8003B51FC /* YourChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756A7620256412E8003B51FC /* YourChatTableViewCell.xib */; };
+		756A76242564137A003B51FC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A76232564137A003B51FC /* UIView+.swift */; };
+		756A762625641495003B51FC /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762525641495003B51FC /* UITableView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		756A760F2564112B003B51FC /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
 		756A761125641141003B51FC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		756A761525641202003B51FC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		756A761B256412D6003B51FC /* MyChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatTableViewCell.swift; sourceTree = "<group>"; };
+		756A761C256412D6003B51FC /* MyChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChatTableViewCell.xib; sourceTree = "<group>"; };
+		756A761F256412E8003B51FC /* YourChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourChatTableViewCell.swift; sourceTree = "<group>"; };
+		756A7620256412E8003B51FC /* YourChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourChatTableViewCell.xib; sourceTree = "<group>"; };
+		756A76232564137A003B51FC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		756A762525641495003B51FC /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		9CC7A9930A67DCB171979E59 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86F4D3FEF128A506D4B41A5 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +119,7 @@
 		756A760E256410C5003B51FC /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				756A761725641287003B51FC /* Parts */,
 				756A760F2564112B003B51FC /* ChatViewController.storyboard */,
 				756A761125641141003B51FC /* ChatViewController.swift */,
 			);
@@ -125,8 +138,37 @@
 			isa = PBXGroup;
 			children = (
 				756A761525641202003B51FC /* UIViewController+.swift */,
+				756A76232564137A003B51FC /* UIView+.swift */,
+				756A762525641495003B51FC /* UITableView+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		756A761725641287003B51FC /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				756A761A256412B6003B51FC /* YourCell */,
+				756A761825641297003B51FC /* MyCelll */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		756A761825641297003B51FC /* MyCelll */ = {
+			isa = PBXGroup;
+			children = (
+				756A761B256412D6003B51FC /* MyChatTableViewCell.swift */,
+				756A761C256412D6003B51FC /* MyChatTableViewCell.xib */,
+			);
+			path = MyCelll;
+			sourceTree = "<group>";
+		};
+		756A761A256412B6003B51FC /* YourCell */ = {
+			isa = PBXGroup;
+			children = (
+				756A761F256412E8003B51FC /* YourChatTableViewCell.swift */,
+				756A7620256412E8003B51FC /* YourChatTableViewCell.xib */,
+			);
+			path = YourCell;
 			sourceTree = "<group>";
 		};
 		D968FD920EA00D3229DF2FC5 /* Frameworks */ = {
@@ -201,7 +243,9 @@
 				756A760B25640F79003B51FC /* awsconfiguration.json in Resources */,
 				756A760125640C6E003B51FC /* LaunchScreen.storyboard in Resources */,
 				756A760C25640F79003B51FC /* amplifyconfiguration.json in Resources */,
+				756A7622256412E8003B51FC /* YourChatTableViewCell.xib in Resources */,
 				756A75FE25640C6E003B51FC /* Assets.xcassets in Resources */,
+				756A761E256412D6003B51FC /* MyChatTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				756A761225641141003B51FC /* ChatViewController.swift in Sources */,
+				756A7621256412E8003B51FC /* YourChatTableViewCell.swift in Sources */,
+				756A761D256412D6003B51FC /* MyChatTableViewCell.swift in Sources */,
+				756A762625641495003B51FC /* UITableView+.swift in Sources */,
 				756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */,
+				756A76242564137A003B51FC /* UIView+.swift in Sources */,
 				756A761625641202003B51FC /* UIViewController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
