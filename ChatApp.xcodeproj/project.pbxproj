@@ -9,27 +9,27 @@
 /* Begin PBXBuildFile section */
 		43E54A473FFA1D815F2EA7C5 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC7A9930A67DCB171979E59 /* Pods_ChatApp.framework */; };
 		756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A75F425640C6D003B51FC /* AppDelegate.swift */; };
-		756A75F725640C6D003B51FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A75F625640C6D003B51FC /* SceneDelegate.swift */; };
-		756A75F925640C6D003B51FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A75F825640C6D003B51FC /* ViewController.swift */; };
-		756A75FC25640C6D003B51FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756A75FA25640C6D003B51FC /* Main.storyboard */; };
 		756A75FE25640C6E003B51FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756A75FD25640C6E003B51FC /* Assets.xcassets */; };
 		756A760125640C6E003B51FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756A75FF25640C6E003B51FC /* LaunchScreen.storyboard */; };
 		756A760B25640F79003B51FC /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 756A760925640F79003B51FC /* awsconfiguration.json */; };
 		756A760C25640F79003B51FC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 756A760A25640F79003B51FC /* amplifyconfiguration.json */; };
+		756A76102564112B003B51FC /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756A760F2564112B003B51FC /* ChatViewController.storyboard */; };
+		756A761225641141003B51FC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761125641141003B51FC /* ChatViewController.swift */; };
+		756A761625641202003B51FC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761525641202003B51FC /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		702C50B747C51670BDDB5D1B /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		756A75F125640C6D003B51FC /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		756A75F425640C6D003B51FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		756A75F625640C6D003B51FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		756A75F825640C6D003B51FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		756A75FB25640C6D003B51FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		756A75FD25640C6E003B51FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		756A760025640C6E003B51FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		756A760225640C6E003B51FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		756A760925640F79003B51FC /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		756A760A25640F79003B51FC /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		756A760F2564112B003B51FC /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
+		756A761125641141003B51FC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		756A761525641202003B51FC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		9CC7A9930A67DCB171979E59 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86F4D3FEF128A506D4B41A5 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,11 +76,10 @@
 		756A75F325640C6D003B51FC /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				756A7613256411DF003B51FC /* Utility */,
+				756A760D256410B8003B51FC /* Views */,
 				756A760825640F70003B51FC /* Config */,
 				756A75F425640C6D003B51FC /* AppDelegate.swift */,
-				756A75F625640C6D003B51FC /* SceneDelegate.swift */,
-				756A75F825640C6D003B51FC /* ViewController.swift */,
-				756A75FA25640C6D003B51FC /* Main.storyboard */,
 				756A75FD25640C6E003B51FC /* Assets.xcassets */,
 				756A75FF25640C6E003B51FC /* LaunchScreen.storyboard */,
 				756A760225640C6E003B51FC /* Info.plist */,
@@ -95,6 +94,39 @@
 				756A760925640F79003B51FC /* awsconfiguration.json */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		756A760D256410B8003B51FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				756A760E256410C5003B51FC /* Chat */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		756A760E256410C5003B51FC /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				756A760F2564112B003B51FC /* ChatViewController.storyboard */,
+				756A761125641141003B51FC /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		756A7613256411DF003B51FC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				756A7614256411E9003B51FC /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		756A7614256411E9003B51FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				756A761525641202003B51FC /* UIViewController+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D968FD920EA00D3229DF2FC5 /* Frameworks */ = {
@@ -165,11 +197,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756A76102564112B003B51FC /* ChatViewController.storyboard in Resources */,
 				756A760B25640F79003B51FC /* awsconfiguration.json in Resources */,
 				756A760125640C6E003B51FC /* LaunchScreen.storyboard in Resources */,
 				756A760C25640F79003B51FC /* amplifyconfiguration.json in Resources */,
 				756A75FE25640C6E003B51FC /* Assets.xcassets in Resources */,
-				756A75FC25640C6D003B51FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,23 +254,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756A75F925640C6D003B51FC /* ViewController.swift in Sources */,
+				756A761225641141003B51FC /* ChatViewController.swift in Sources */,
 				756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */,
-				756A75F725640C6D003B51FC /* SceneDelegate.swift in Sources */,
+				756A761625641202003B51FC /* UIViewController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		756A75FA25640C6D003B51FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				756A75FB25640C6D003B51FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		756A75FF25640C6E003B51FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
