@@ -22,6 +22,9 @@
 		756A7622256412E8003B51FC /* YourChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756A7620256412E8003B51FC /* YourChatTableViewCell.xib */; };
 		756A76242564137A003B51FC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A76232564137A003B51FC /* UIView+.swift */; };
 		756A762625641495003B51FC /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762525641495003B51FC /* UITableView+.swift */; };
+		756A762B25641B42003B51FC /* Message+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762825641B42003B51FC /* Message+Schema.swift */; };
+		756A762C25641B42003B51FC /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762925641B42003B51FC /* AmplifyModels.swift */; };
+		756A762D25641B42003B51FC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762A25641B42003B51FC /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +34,8 @@
 		756A75FD25640C6E003B51FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		756A760025640C6E003B51FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		756A760225640C6E003B51FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		756A760925640F79003B51FC /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
-		756A760A25640F79003B51FC /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		756A760925640F79003B51FC /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ChatApp/Config/awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		756A760A25640F79003B51FC /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ChatApp/Config/amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		756A760F2564112B003B51FC /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
 		756A761125641141003B51FC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		756A761525641202003B51FC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -42,6 +45,9 @@
 		756A7620256412E8003B51FC /* YourChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourChatTableViewCell.xib; sourceTree = "<group>"; };
 		756A76232564137A003B51FC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		756A762525641495003B51FC /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		756A762825641B42003B51FC /* Message+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Message+Schema.swift"; path = "ChatApp/Models/Message+Schema.swift"; sourceTree = SOURCE_ROOT; };
+		756A762925641B42003B51FC /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = ChatApp/Models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
+		756A762A25641B42003B51FC /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ChatApp/Models/Message.swift; sourceTree = SOURCE_ROOT; };
 		9CC7A9930A67DCB171979E59 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86F4D3FEF128A506D4B41A5 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +94,7 @@
 		756A75F325640C6D003B51FC /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				756A762725641B2F003B51FC /* Models */,
 				756A7613256411DF003B51FC /* Utility */,
 				756A760D256410B8003B51FC /* Views */,
 				756A760825640F70003B51FC /* Config */,
@@ -169,6 +176,16 @@
 				756A7620256412E8003B51FC /* YourChatTableViewCell.xib */,
 			);
 			path = YourCell;
+			sourceTree = "<group>";
+		};
+		756A762725641B2F003B51FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				756A762925641B42003B51FC /* AmplifyModels.swift */,
+				756A762A25641B42003B51FC /* Message.swift */,
+				756A762825641B42003B51FC /* Message+Schema.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D968FD920EA00D3229DF2FC5 /* Frameworks */ = {
@@ -298,11 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756A762B25641B42003B51FC /* Message+Schema.swift in Sources */,
 				756A761225641141003B51FC /* ChatViewController.swift in Sources */,
 				756A7621256412E8003B51FC /* YourChatTableViewCell.swift in Sources */,
 				756A761D256412D6003B51FC /* MyChatTableViewCell.swift in Sources */,
+				756A762C25641B42003B51FC /* AmplifyModels.swift in Sources */,
 				756A762625641495003B51FC /* UITableView+.swift in Sources */,
 				756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */,
+				756A762D25641B42003B51FC /* Message.swift in Sources */,
 				756A76242564137A003B51FC /* UIView+.swift in Sources */,
 				756A761625641202003B51FC /* UIViewController+.swift in Sources */,
 			);

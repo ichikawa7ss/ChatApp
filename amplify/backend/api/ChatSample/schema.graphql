@@ -1,0 +1,6 @@
+type Message @model {
+  id: ID!
+  text: String!
+  ts: Float!
+  user: String!
+}
