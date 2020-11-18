@@ -23,18 +23,43 @@
                                     <outlet property="delegate" destination="jxM-ws-51r" id="IKl-S0-fK2"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-yB-rHm">
+                                <rect key="frame" x="354" y="-740" width="60" height="1602"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="AdM-QO-ETX"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="tappedSendButton" destination="jxM-ws-51r" eventType="touchUpInside" id="ybH-lt-lyn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ArF-Ab-kdy">
+                                <rect key="frame" x="8" y="44" width="346" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5xj-tn-uXj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Dzv-XT-cvg" firstAttribute="leading" secondItem="Rab-ob-M72" secondAttribute="leading" id="6wk-ib-rRR"/>
+                            <constraint firstItem="Rab-ob-M72" firstAttribute="trailing" secondItem="fIK-yB-rHm" secondAttribute="trailing" id="FWo-lx-3hH"/>
+                            <constraint firstItem="Rab-ob-M72" firstAttribute="bottom" secondItem="fIK-yB-rHm" secondAttribute="bottom" id="Si0-f6-F9e"/>
                             <constraint firstItem="Dzv-XT-cvg" firstAttribute="top" secondItem="Rab-ob-M72" secondAttribute="top" id="Tv9-ls-G7w"/>
+                            <constraint firstItem="ArF-Ab-kdy" firstAttribute="leading" secondItem="Rab-ob-M72" secondAttribute="leading" constant="8" id="e6L-Gd-q6I"/>
+                            <constraint firstItem="ArF-Ab-kdy" firstAttribute="trailing" secondItem="fIK-yB-rHm" secondAttribute="leading" id="erK-G3-FbY"/>
+                            <constraint firstItem="ArF-Ab-kdy" firstAttribute="top" secondItem="Rab-ob-M72" secondAttribute="top" id="l1E-75-G4d"/>
                             <constraint firstItem="Rab-ob-M72" firstAttribute="bottom" secondItem="Dzv-XT-cvg" secondAttribute="bottom" id="rBL-wo-YPZ"/>
                             <constraint firstItem="Rab-ob-M72" firstAttribute="trailing" secondItem="Dzv-XT-cvg" secondAttribute="trailing" id="rQo-Tm-gKr"/>
+                            <constraint firstItem="fIK-yB-rHm" firstAttribute="centerY" secondItem="ArF-Ab-kdy" secondAttribute="centerY" id="xwu-OS-Cf9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rab-ob-M72"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Dzv-XT-cvg" id="MVD-Ea-CuU"/>
+                        <outlet property="textField" destination="ArF-Ab-kdy" id="sBq-Jr-U8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7f-8u-wHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
