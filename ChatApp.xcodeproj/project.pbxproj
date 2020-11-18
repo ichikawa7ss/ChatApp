@@ -25,6 +25,10 @@
 		756A762B25641B42003B51FC /* Message+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762825641B42003B51FC /* Message+Schema.swift */; };
 		756A762C25641B42003B51FC /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762925641B42003B51FC /* AmplifyModels.swift */; };
 		756A762D25641B42003B51FC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762A25641B42003B51FC /* Message.swift */; };
+		75D9C68B256565CF0021B8B3 /* UserDefaultsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68A256565CF0021B8B3 /* UserDefaultsType.swift */; };
+		75D9C68D256566840021B8B3 /* UserDefaultsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68C256566840021B8B3 /* UserDefaultsDataStore.swift */; };
+		75D9C690256566E90021B8B3 /* UserDefaultsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68F256566E90021B8B3 /* UserDefaultsTypes.swift */; };
+		75D9C695256568BA0021B8B3 /* UserIdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C694256568BA0021B8B3 /* UserIdRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		756A762825641B42003B51FC /* Message+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Message+Schema.swift"; path = "ChatApp/Models/Message+Schema.swift"; sourceTree = SOURCE_ROOT; };
 		756A762925641B42003B51FC /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = ChatApp/Models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
 		756A762A25641B42003B51FC /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ChatApp/Models/Message.swift; sourceTree = SOURCE_ROOT; };
+		75D9C68A256565CF0021B8B3 /* UserDefaultsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsType.swift; sourceTree = "<group>"; };
+		75D9C68C256566840021B8B3 /* UserDefaultsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataStore.swift; sourceTree = "<group>"; };
+		75D9C68F256566E90021B8B3 /* UserDefaultsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTypes.swift; sourceTree = "<group>"; };
+		75D9C694256568BA0021B8B3 /* UserIdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdRepository.swift; sourceTree = "<group>"; };
 		9CC7A9930A67DCB171979E59 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86F4D3FEF128A506D4B41A5 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +144,7 @@
 		756A7613256411DF003B51FC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				75D9C6892565659C0021B8B3 /* UD */,
 				756A7614256411E9003B51FC /* Extensions */,
 			);
 			path = Utility;
@@ -186,6 +195,33 @@
 				756A762825641B42003B51FC /* Message+Schema.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		75D9C6892565659C0021B8B3 /* UD */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C692256568A20021B8B3 /* Type */,
+				75D9C691256568990021B8B3 /* Base */,
+			);
+			path = UD;
+			sourceTree = "<group>";
+		};
+		75D9C691256568990021B8B3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C68A256565CF0021B8B3 /* UserDefaultsType.swift */,
+				75D9C68C256566840021B8B3 /* UserDefaultsDataStore.swift */,
+				75D9C68F256566E90021B8B3 /* UserDefaultsTypes.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		75D9C692256568A20021B8B3 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				75D9C694256568BA0021B8B3 /* UserIdRepository.swift */,
+			);
+			path = Type;
 			sourceTree = "<group>";
 		};
 		D968FD920EA00D3229DF2FC5 /* Frameworks */ = {
@@ -316,12 +352,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				756A762B25641B42003B51FC /* Message+Schema.swift in Sources */,
+				75D9C695256568BA0021B8B3 /* UserIdRepository.swift in Sources */,
 				756A761225641141003B51FC /* ChatViewController.swift in Sources */,
+				75D9C690256566E90021B8B3 /* UserDefaultsTypes.swift in Sources */,
 				756A7621256412E8003B51FC /* YourChatTableViewCell.swift in Sources */,
+				75D9C68B256565CF0021B8B3 /* UserDefaultsType.swift in Sources */,
 				756A761D256412D6003B51FC /* MyChatTableViewCell.swift in Sources */,
 				756A762C25641B42003B51FC /* AmplifyModels.swift in Sources */,
 				756A762625641495003B51FC /* UITableView+.swift in Sources */,
 				756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */,
+				75D9C68D256566840021B8B3 /* UserDefaultsDataStore.swift in Sources */,
 				756A762D25641B42003B51FC /* Message.swift in Sources */,
 				756A76242564137A003B51FC /* UIView+.swift in Sources */,
 				756A761625641202003B51FC /* UIViewController+.swift in Sources */,
