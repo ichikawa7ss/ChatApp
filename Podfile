@@ -7,5 +7,5 @@ target 'ChatApp' do
 
   # Pods for ChatApp
   pod 'Amplify'
-
+  pod 'AmplifyPlugins/AWSAPIPlugin'
 end

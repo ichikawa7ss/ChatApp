@@ -22,7 +22,7 @@ extension Message {
     model.fields(
       .id(),
       .field(message.text, is: .required, ofType: .string),
-      .field(message.ts, is: .required, ofType: .double),
+      .field(message.ts, is: .required, ofType: .string),
       .field(message.user, is: .required, ofType: .string)
     )
     }

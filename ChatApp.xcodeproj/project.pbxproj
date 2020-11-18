@@ -11,8 +11,6 @@
 		756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A75F425640C6D003B51FC /* AppDelegate.swift */; };
 		756A75FE25640C6E003B51FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756A75FD25640C6E003B51FC /* Assets.xcassets */; };
 		756A760125640C6E003B51FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756A75FF25640C6E003B51FC /* LaunchScreen.storyboard */; };
-		756A760B25640F79003B51FC /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 756A760925640F79003B51FC /* awsconfiguration.json */; };
-		756A760C25640F79003B51FC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 756A760A25640F79003B51FC /* amplifyconfiguration.json */; };
 		756A76102564112B003B51FC /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756A760F2564112B003B51FC /* ChatViewController.storyboard */; };
 		756A761225641141003B51FC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761125641141003B51FC /* ChatViewController.swift */; };
 		756A761625641202003B51FC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A761525641202003B51FC /* UIViewController+.swift */; };
@@ -22,13 +20,15 @@
 		756A7622256412E8003B51FC /* YourChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756A7620256412E8003B51FC /* YourChatTableViewCell.xib */; };
 		756A76242564137A003B51FC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A76232564137A003B51FC /* UIView+.swift */; };
 		756A762625641495003B51FC /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762525641495003B51FC /* UITableView+.swift */; };
-		756A762B25641B42003B51FC /* Message+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762825641B42003B51FC /* Message+Schema.swift */; };
-		756A762C25641B42003B51FC /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762925641B42003B51FC /* AmplifyModels.swift */; };
-		756A762D25641B42003B51FC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762A25641B42003B51FC /* Message.swift */; };
 		75D9C68B256565CF0021B8B3 /* UserDefaultsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68A256565CF0021B8B3 /* UserDefaultsType.swift */; };
 		75D9C68D256566840021B8B3 /* UserDefaultsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68C256566840021B8B3 /* UserDefaultsDataStore.swift */; };
 		75D9C690256566E90021B8B3 /* UserDefaultsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68F256566E90021B8B3 /* UserDefaultsTypes.swift */; };
 		75D9C695256568BA0021B8B3 /* UserIdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C694256568BA0021B8B3 /* UserIdRepository.swift */; };
+		75D9C69B25656EAF0021B8B3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C69825656EAF0021B8B3 /* Message.swift */; };
+		75D9C69C25656EAF0021B8B3 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C69925656EAF0021B8B3 /* AmplifyModels.swift */; };
+		75D9C69D25656EAF0021B8B3 /* Message+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C69A25656EAF0021B8B3 /* Message+Schema.swift */; };
+		75D9C6A025656F2F0021B8B3 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D9C69E25656F2F0021B8B3 /* amplifyconfiguration.json */; };
+		75D9C6A125656F2F0021B8B3 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D9C69F25656F2F0021B8B3 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,6 @@
 		756A75FD25640C6E003B51FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		756A760025640C6E003B51FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		756A760225640C6E003B51FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		756A760925640F79003B51FC /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ChatApp/Config/awsconfiguration.json; sourceTree = SOURCE_ROOT; };
-		756A760A25640F79003B51FC /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ChatApp/Config/amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		756A760F2564112B003B51FC /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
 		756A761125641141003B51FC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		756A761525641202003B51FC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -49,13 +47,15 @@
 		756A7620256412E8003B51FC /* YourChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourChatTableViewCell.xib; sourceTree = "<group>"; };
 		756A76232564137A003B51FC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		756A762525641495003B51FC /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
-		756A762825641B42003B51FC /* Message+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Message+Schema.swift"; path = "ChatApp/Models/Message+Schema.swift"; sourceTree = SOURCE_ROOT; };
-		756A762925641B42003B51FC /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = ChatApp/Models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
-		756A762A25641B42003B51FC /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ChatApp/Models/Message.swift; sourceTree = SOURCE_ROOT; };
 		75D9C68A256565CF0021B8B3 /* UserDefaultsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsType.swift; sourceTree = "<group>"; };
 		75D9C68C256566840021B8B3 /* UserDefaultsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataStore.swift; sourceTree = "<group>"; };
 		75D9C68F256566E90021B8B3 /* UserDefaultsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTypes.swift; sourceTree = "<group>"; };
 		75D9C694256568BA0021B8B3 /* UserIdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdRepository.swift; sourceTree = "<group>"; };
+		75D9C69825656EAF0021B8B3 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = amplify/generated/models/Message.swift; sourceTree = SOURCE_ROOT; };
+		75D9C69925656EAF0021B8B3 /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
+		75D9C69A25656EAF0021B8B3 /* Message+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Message+Schema.swift"; path = "amplify/generated/models/Message+Schema.swift"; sourceTree = SOURCE_ROOT; };
+		75D9C69E25656F2F0021B8B3 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		75D9C69F25656F2F0021B8B3 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		9CC7A9930A67DCB171979E59 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86F4D3FEF128A506D4B41A5 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,8 +117,8 @@
 		756A760825640F70003B51FC /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				756A760A25640F79003B51FC /* amplifyconfiguration.json */,
-				756A760925640F79003B51FC /* awsconfiguration.json */,
+				75D9C69E25656F2F0021B8B3 /* amplifyconfiguration.json */,
+				75D9C69F25656F2F0021B8B3 /* awsconfiguration.json */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -190,9 +190,9 @@
 		756A762725641B2F003B51FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				756A762925641B42003B51FC /* AmplifyModels.swift */,
-				756A762A25641B42003B51FC /* Message.swift */,
-				756A762825641B42003B51FC /* Message+Schema.swift */,
+				75D9C69925656EAF0021B8B3 /* AmplifyModels.swift */,
+				75D9C69825656EAF0021B8B3 /* Message.swift */,
+				75D9C69A25656EAF0021B8B3 /* Message+Schema.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,9 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				756A76102564112B003B51FC /* ChatViewController.storyboard in Resources */,
-				756A760B25640F79003B51FC /* awsconfiguration.json in Resources */,
+				75D9C6A125656F2F0021B8B3 /* awsconfiguration.json in Resources */,
+				75D9C6A025656F2F0021B8B3 /* amplifyconfiguration.json in Resources */,
 				756A760125640C6E003B51FC /* LaunchScreen.storyboard in Resources */,
-				756A760C25640F79003B51FC /* amplifyconfiguration.json in Resources */,
 				756A7622256412E8003B51FC /* YourChatTableViewCell.xib in Resources */,
 				756A75FE25640C6E003B51FC /* Assets.xcassets in Resources */,
 				756A761E256412D6003B51FC /* MyChatTableViewCell.xib in Resources */,
@@ -351,18 +351,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756A762B25641B42003B51FC /* Message+Schema.swift in Sources */,
 				75D9C695256568BA0021B8B3 /* UserIdRepository.swift in Sources */,
 				756A761225641141003B51FC /* ChatViewController.swift in Sources */,
 				75D9C690256566E90021B8B3 /* UserDefaultsTypes.swift in Sources */,
+				75D9C69C25656EAF0021B8B3 /* AmplifyModels.swift in Sources */,
 				756A7621256412E8003B51FC /* YourChatTableViewCell.swift in Sources */,
 				75D9C68B256565CF0021B8B3 /* UserDefaultsType.swift in Sources */,
+				75D9C69D25656EAF0021B8B3 /* Message+Schema.swift in Sources */,
 				756A761D256412D6003B51FC /* MyChatTableViewCell.swift in Sources */,
-				756A762C25641B42003B51FC /* AmplifyModels.swift in Sources */,
 				756A762625641495003B51FC /* UITableView+.swift in Sources */,
 				756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */,
 				75D9C68D256566840021B8B3 /* UserDefaultsDataStore.swift in Sources */,
-				756A762D25641B42003B51FC /* Message.swift in Sources */,
+				75D9C69B25656EAF0021B8B3 /* Message.swift in Sources */,
 				756A76242564137A003B51FC /* UIView+.swift in Sources */,
 				756A761625641202003B51FC /* UIViewController+.swift in Sources */,
 			);
