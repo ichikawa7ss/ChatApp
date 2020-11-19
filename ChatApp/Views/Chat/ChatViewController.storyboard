@@ -24,7 +24,8 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-yB-rHm">
-                                <rect key="frame" x="354" y="-740" width="60" height="1602"/>
+                                <rect key="frame" x="354" y="46" width="60" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="AdM-QO-ETX"/>
                                 </constraints>
@@ -46,7 +47,6 @@
                         <constraints>
                             <constraint firstItem="Dzv-XT-cvg" firstAttribute="leading" secondItem="Rab-ob-M72" secondAttribute="leading" id="6wk-ib-rRR"/>
                             <constraint firstItem="Rab-ob-M72" firstAttribute="trailing" secondItem="fIK-yB-rHm" secondAttribute="trailing" id="FWo-lx-3hH"/>
-                            <constraint firstItem="Rab-ob-M72" firstAttribute="bottom" secondItem="fIK-yB-rHm" secondAttribute="bottom" id="Si0-f6-F9e"/>
                             <constraint firstItem="Dzv-XT-cvg" firstAttribute="top" secondItem="Rab-ob-M72" secondAttribute="top" id="Tv9-ls-G7w"/>
                             <constraint firstItem="ArF-Ab-kdy" firstAttribute="leading" secondItem="Rab-ob-M72" secondAttribute="leading" constant="8" id="e6L-Gd-q6I"/>
                             <constraint firstItem="ArF-Ab-kdy" firstAttribute="trailing" secondItem="fIK-yB-rHm" secondAttribute="leading" id="erK-G3-FbY"/>

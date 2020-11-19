@@ -22,6 +22,8 @@ final class ChatViewController: UIViewController {
     
     var messages: [Message] = []
     
+    var subscription: GraphQLSubscriptionOperation<Message>?
+    
     var myId: String {
         return UserIdRepositoryProvider.provide().getUserId() ?? ""
     }
@@ -29,9 +31,12 @@ final class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchMessage()
+        self.subscribeMessage()
     }
     
     @IBAction func tappedSendButton() {
+        self.textField.text = ""
+        self.textField.resignFirstResponder()
         // create messeage
         guard let text = self.textField.text else { return }
         let ts = String(Date().timeIntervalSince1970)
@@ -42,7 +47,9 @@ final class ChatViewController: UIViewController {
             case .success(let result):
                 switch result {
                 case .success(let message):
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                     print("Successfully created the message: \(message)")
                 case .failure(let graphQLError): // graphqlの作成に失敗した場合
                     print("Failed to create graphql \(graphQLError)")
@@ -68,6 +75,32 @@ final class ChatViewController: UIViewController {
                 }
             case .failure(let error):
                 print("Got failed event with error \(error)")
+            }
+        }
+    }
+    
+    func subscribeMessage() {
+        subscription = Amplify.API.subscribe(request: .subscription(of: Message.self, type: .onCreate), valueListener: { (subscriptionEvent) in
+            switch subscriptionEvent {
+            case .connection(let subscriptionConnectionState):
+                print("Subscription connect state is \(subscriptionConnectionState)")
+            case .data(let result):
+                switch result {
+                case .success(let createdMessage):
+                    self.messages.append(createdMessage)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print("Got failed result with \(error.errorDescription)")
+                }
+            }
+        }) { result in
+            switch result {
+            case .success:
+                print("Subscription has been closed successfully")
+            case .failure(let apiError):
+                print("Subscription has terminated with \(apiError)")
             }
         }
     }
