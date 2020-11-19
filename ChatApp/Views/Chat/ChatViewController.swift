@@ -20,8 +20,15 @@ final class ChatViewController: UIViewController {
     
     @IBOutlet private weak var textField: UITextField!
     
+    var messages: [Message] = []
+    
+    var myId: String {
+        return UserIdRepositoryProvider.provide().getUserId() ?? ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.fetchMessage()
     }
     
     @IBAction func tappedSendButton() {
@@ -35,6 +42,7 @@ final class ChatViewController: UIViewController {
             case .success(let result):
                 switch result {
                 case .success(let message):
+                    self.tableView.reloadData()
                     print("Successfully created the message: \(message)")
                 case .failure(let graphQLError): // graphqlの作成に失敗した場合
                     print("Failed to create graphql \(graphQLError)")
@@ -44,29 +52,51 @@ final class ChatViewController: UIViewController {
             }
         }
     }
+    
+    func fetchMessage() {
+        Amplify.API.query(request: .list(Message.self, where: nil)) { event in
+            switch event {
+            case .success(let result):
+                switch result {
+                case .success(let messages):
+                    self.messages = messages
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print("Got failed result with \(error.errorDescription)")
+                }
+            case .failure(let error):
+                print("Got failed event with error \(error)")
+            }
+        }
+    }
 }
 
 extension ChatViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row % 2 == 0 {
-            let cell = self.myChatCell(tableView.dequeueReusableCell(for: indexPath))
+        guard let message = messages[safe: indexPath.row] else { return UITableViewCell() }
+        if message.user == myId {
+            let cell = self.myChatCell(tableView.dequeueReusableCell(for: indexPath), text: message.text)
             return cell
         } else {
-            let cell = self.yourChatCell(tableView.dequeueReusableCell(for: indexPath))
+            let cell = self.yourChatCell(tableView.dequeueReusableCell(for: indexPath), text: message.text)
             return cell
         }
     }
     
-    private func myChatCell(_ cell: MyChatTableViewCell)  -> MyChatTableViewCell {
+    private func myChatCell(_ cell: MyChatTableViewCell, text: String)  -> MyChatTableViewCell {
+        cell.setData(text)
         return cell
     }
     
-    private func yourChatCell(_ cell: YourChatTableViewCell)  -> YourChatTableViewCell {
+    private func yourChatCell(_ cell: YourChatTableViewCell, text: String)  -> YourChatTableViewCell {
+        cell.setData(text)
         return cell
     }
 

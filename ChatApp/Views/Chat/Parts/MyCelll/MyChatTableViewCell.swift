@@ -10,9 +10,15 @@ import UIKit
 
 final class MyChatTableViewCell: UITableViewCell {
 
+    @IBOutlet private weak var label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setData(_ text: String) {
+        self.label.text = text
     }
 
 }
