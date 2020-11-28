@@ -20,9 +20,9 @@
 		756A7622256412E8003B51FC /* YourChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756A7620256412E8003B51FC /* YourChatTableViewCell.xib */; };
 		756A76242564137A003B51FC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A76232564137A003B51FC /* UIView+.swift */; };
 		756A762625641495003B51FC /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A762525641495003B51FC /* UITableView+.swift */; };
-		75AD04622572493400B3ACBA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD04602572493300B3ACBA /* Chat.swift */; };
-		75AD04632572493400B3ACBA /* Chat+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD04612572493400B3ACBA /* Chat+Schema.swift */; };
 		75AD046625724DFE00B3ACBA /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 75AD046525724DFE00B3ACBA /* IQKeyboardManagerSwift */; };
+		75AD04692572726600B3ACBA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD04672572726600B3ACBA /* Message.swift */; };
+		75AD046A2572726600B3ACBA /* Message+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD04682572726600B3ACBA /* Message+Schema.swift */; };
 		75D9C68B256565CF0021B8B3 /* UserDefaultsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68A256565CF0021B8B3 /* UserDefaultsType.swift */; };
 		75D9C68D256566840021B8B3 /* UserDefaultsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68C256566840021B8B3 /* UserDefaultsDataStore.swift */; };
 		75D9C690256566E90021B8B3 /* UserDefaultsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9C68F256566E90021B8B3 /* UserDefaultsTypes.swift */; };
@@ -49,8 +49,8 @@
 		756A7620256412E8003B51FC /* YourChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourChatTableViewCell.xib; sourceTree = "<group>"; };
 		756A76232564137A003B51FC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		756A762525641495003B51FC /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
-		75AD04602572493300B3ACBA /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = amplify/generated/models/Chat.swift; sourceTree = SOURCE_ROOT; };
-		75AD04612572493400B3ACBA /* Chat+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Chat+Schema.swift"; path = "amplify/generated/models/Chat+Schema.swift"; sourceTree = SOURCE_ROOT; };
+		75AD04672572726600B3ACBA /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = amplify/generated/models/Message.swift; sourceTree = SOURCE_ROOT; };
+		75AD04682572726600B3ACBA /* Message+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Message+Schema.swift"; path = "amplify/generated/models/Message+Schema.swift"; sourceTree = SOURCE_ROOT; };
 		75D9C68A256565CF0021B8B3 /* UserDefaultsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsType.swift; sourceTree = "<group>"; };
 		75D9C68C256566840021B8B3 /* UserDefaultsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataStore.swift; sourceTree = "<group>"; };
 		75D9C68F256566E90021B8B3 /* UserDefaultsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTypes.swift; sourceTree = "<group>"; };
@@ -195,8 +195,8 @@
 		756A762725641B2F003B51FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				75AD04602572493300B3ACBA /* Chat.swift */,
-				75AD04612572493400B3ACBA /* Chat+Schema.swift */,
+				75AD04672572726600B3ACBA /* Message.swift */,
+				75AD04682572726600B3ACBA /* Message+Schema.swift */,
 				75D9C69925656EAF0021B8B3 /* AmplifyModels.swift */,
 			);
 			path = Models;
@@ -367,14 +367,14 @@
 				75D9C690256566E90021B8B3 /* UserDefaultsTypes.swift in Sources */,
 				75D9C69C25656EAF0021B8B3 /* AmplifyModels.swift in Sources */,
 				75D9C6A52566A5C20021B8B3 /* Array+.swift in Sources */,
-				75AD04622572493400B3ACBA /* Chat.swift in Sources */,
 				756A7621256412E8003B51FC /* YourChatTableViewCell.swift in Sources */,
-				75AD04632572493400B3ACBA /* Chat+Schema.swift in Sources */,
+				75AD046A2572726600B3ACBA /* Message+Schema.swift in Sources */,
 				75D9C68B256565CF0021B8B3 /* UserDefaultsType.swift in Sources */,
 				756A761D256412D6003B51FC /* MyChatTableViewCell.swift in Sources */,
 				756A762625641495003B51FC /* UITableView+.swift in Sources */,
 				756A75F525640C6D003B51FC /* AppDelegate.swift in Sources */,
 				75D9C68D256566840021B8B3 /* UserDefaultsDataStore.swift in Sources */,
+				75AD04692572726600B3ACBA /* Message.swift in Sources */,
 				756A76242564137A003B51FC /* UIView+.swift in Sources */,
 				756A761625641202003B51FC /* UIViewController+.swift in Sources */,
 			);

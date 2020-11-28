@@ -2,7 +2,7 @@
 import Amplify
 import Foundation
 
-public struct Chat: Model {
+public struct Message: Model {
   public let id: String
   public var text: String
   public var ts: String

@@ -9,7 +9,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7,
-              "description": "After renaming from Message to Chat."
+              "description": ""
             }
           },
           "additionalAuthenticationProviders": []

@@ -20,9 +20,9 @@ final class ChatViewController: UIViewController {
     
     @IBOutlet private weak var textField: UITextField!
     
-    var chats: [Chat] = []
+    var messages: [Message] = []
     
-    var subscription: GraphQLSubscriptionOperation<Chat>?
+    var subscription: GraphQLSubscriptionOperation<Message>?
     
     var myId: String {
         return UserIdRepositoryProvider.provide().getUserId() ?? ""
@@ -30,8 +30,8 @@ final class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchChat()
-        self.subscribeChat()
+        self.fetchMessage()
+        self.subscribeMessage()
     }
     
     @IBAction func tappedSendButton() {
@@ -40,20 +40,20 @@ final class ChatViewController: UIViewController {
         guard let text = self.textField.text else { return }
         let ts = String(Date().timeIntervalSince1970)
         let user = UserIdRepositoryProvider.provide().getUserId()
-        let chat = Chat(text: text, ts: ts, user: user!)
-        Amplify.API.mutate(request: .create(chat)) { event in
+        let message = Message(text: text, ts: ts, user: user!)
+        Amplify.API.mutate(request: .create(message)) { event in
             switch event {
             case .success(let result):
                 switch result {
-                case .success(let chat):
+                case .success(let message):
                     // TODO: 送信中っぽいアニメーションをつけたい
                     // できれば通信状態も管理して、送信失敗した場合にも再送するか確認するようなアクションにしたい
-                    print("Successfully created the chat: \(chat)")
+                    print("Successfully created the message: \(message)")
                 case .failure(let graphQLError): // graphqlの作成に失敗した場合
                     print("Failed to create graphql \(graphQLError)")
                 }
             case .failure(let apiError): // 通信などAPIErrorになった場合
-                print("Failed to create a chat", apiError)
+                print("Failed to create a message", apiError)
             }
         }
         
@@ -61,13 +61,13 @@ final class ChatViewController: UIViewController {
         self.textField.text = ""
     }
     
-    func fetchChat() {
-        Amplify.API.query(request: .list(Chat.self, where: nil)) { event in
+    func fetchMessage() {
+        Amplify.API.query(request: .list(Message.self, where: nil)) { event in
             switch event {
             case .success(let result):
                 switch result {
-                case .success(let chats):
-                    self.chats = chats
+                case .success(let messages):
+                    self.messages = messages
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -80,22 +80,22 @@ final class ChatViewController: UIViewController {
         }
     }
     
-    func subscribeChat() {
-        subscription = Amplify.API.subscribe(request: .subscription(of: Chat.self, type: .onCreate), valueListener: { (subscriptionEvent) in
+    func subscribeMessage() {
+        subscription = Amplify.API.subscribe(request: .subscription(of: Message.self, type: .onCreate), valueListener: { (subscriptionEvent) in
             switch subscriptionEvent {
             case .connection(let subscriptionConnectionState):
                 print("Subscription connect state is \(subscriptionConnectionState)")
             case .data(let result):
                 switch result {
-                case .success(let createdChat):
-                    self.chats.append(createdChat)
+                case .success(let createdMessage):
+                    self.messages.append(createdMessage)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                         
                         // TODO: 過去のログを見てるときにメッセージが来たらスクロールせずに「メッセージが来てます」的な文言を出したい
                         
                         // 最新のメッセージまでスクロール
-                        let indexPath = IndexPath(row: self.chats.count - 1, section: 0)
+                        let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
                         self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                     }
                 case .failure(let error):
@@ -116,16 +116,16 @@ final class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.chats.count
+        return self.messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let chat = chats[safe: indexPath.row] else { return UITableViewCell() }
-        if chat.user == myId {
-            let cell = self.myChatCell(tableView.dequeueReusableCell(for: indexPath), text: chat.text)
+        guard let message = messages[safe: indexPath.row] else { return UITableViewCell() }
+        if message.user == myId {
+            let cell = self.myChatCell(tableView.dequeueReusableCell(for: indexPath), text: message.text)
             return cell
         } else {
-            let cell = self.yourChatCell(tableView.dequeueReusableCell(for: indexPath), text: chat.text)
+            let cell = self.yourChatCell(tableView.dequeueReusableCell(for: indexPath), text: message.text)
             return cell
         }
     }

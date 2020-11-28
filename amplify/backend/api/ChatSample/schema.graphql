@@ -1,4 +1,4 @@
-type Chat @model {
+type Message @model @key(fields: ["user", "ts"]) {
   id: ID!
   text: String!
   ts: String!
