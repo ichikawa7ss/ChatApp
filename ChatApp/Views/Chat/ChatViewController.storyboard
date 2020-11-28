@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dzv-XT-cvg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dzv-XT-cvg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="784"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="jxM-ws-51r" id="Wq1-nu-s5I"/>
@@ -24,7 +24,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-yB-rHm">
-                                <rect key="frame" x="354" y="46" width="60" height="30"/>
+                                <rect key="frame" x="354" y="830" width="60" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="AdM-QO-ETX"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ArF-Ab-kdy">
-                                <rect key="frame" x="8" y="44" width="346" height="34"/>
+                                <rect key="frame" x="8" y="828" width="346" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="5xj-tn-uXj"/>
                                 </constraints>
@@ -50,9 +50,9 @@
                             <constraint firstItem="Dzv-XT-cvg" firstAttribute="top" secondItem="Rab-ob-M72" secondAttribute="top" id="Tv9-ls-G7w"/>
                             <constraint firstItem="ArF-Ab-kdy" firstAttribute="leading" secondItem="Rab-ob-M72" secondAttribute="leading" constant="8" id="e6L-Gd-q6I"/>
                             <constraint firstItem="ArF-Ab-kdy" firstAttribute="trailing" secondItem="fIK-yB-rHm" secondAttribute="leading" id="erK-G3-FbY"/>
-                            <constraint firstItem="ArF-Ab-kdy" firstAttribute="top" secondItem="Rab-ob-M72" secondAttribute="top" id="l1E-75-G4d"/>
-                            <constraint firstItem="Rab-ob-M72" firstAttribute="bottom" secondItem="Dzv-XT-cvg" secondAttribute="bottom" id="rBL-wo-YPZ"/>
+                            <constraint firstItem="ArF-Ab-kdy" firstAttribute="top" secondItem="Dzv-XT-cvg" secondAttribute="bottom" id="rBL-wo-YPZ"/>
                             <constraint firstItem="Rab-ob-M72" firstAttribute="trailing" secondItem="Dzv-XT-cvg" secondAttribute="trailing" id="rQo-Tm-gKr"/>
+                            <constraint firstItem="Rab-ob-M72" firstAttribute="bottom" secondItem="ArF-Ab-kdy" secondAttribute="bottom" id="tTM-4N-lZA"/>
                             <constraint firstItem="fIK-yB-rHm" firstAttribute="centerY" secondItem="ArF-Ab-kdy" secondAttribute="centerY" id="xwu-OS-Cf9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rab-ob-M72"/>

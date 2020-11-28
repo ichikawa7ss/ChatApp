@@ -2,7 +2,7 @@
 import Amplify
 import Foundation
 
-extension Message {
+extension Chat {
   // MARK: - CodingKeys 
    public enum CodingKeys: String, ModelKey {
     case id
@@ -15,15 +15,15 @@ extension Message {
   //  MARK: - ModelSchema 
   
   public static let schema = defineSchema { model in
-    let message = Message.keys
+    let chat = Chat.keys
     
-    model.pluralName = "Messages"
+    model.pluralName = "Chats"
     
     model.fields(
       .id(),
-      .field(message.text, is: .required, ofType: .string),
-      .field(message.ts, is: .required, ofType: .string),
-      .field(message.user, is: .required, ofType: .string)
+      .field(chat.text, is: .required, ofType: .string),
+      .field(chat.ts, is: .required, ofType: .string),
+      .field(chat.user, is: .required, ofType: .string)
     )
     }
 }
