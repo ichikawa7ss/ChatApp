@@ -9,6 +9,7 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // Setup Amplify
         do {
             try Amplify.add(plugin: AWSAPIPlugin(modelRegistration: AmplifyModels()))
             try Amplify.configure()
@@ -24,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("An error occurred setting up Amplify: \(error)")
         }
         
+        // Setup IQKeyboardManager
+        IQKeyboardManager.shared.enable = true
+        
+        // Setup InitialViewController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = ChatViewController.instantiate()
         self.window?.makeKeyAndVisible()
