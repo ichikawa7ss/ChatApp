@@ -46,9 +46,8 @@ final class ChatViewController: UIViewController {
             case .success(let result):
                 switch result {
                 case .success(let chat):
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
+                    // TODO: 送信中っぽいアニメーションをつけたい
+                    // できれば通信状態も管理して、送信失敗した場合にも再送するか確認するようなアクションにしたい
                     print("Successfully created the chat: \(chat)")
                 case .failure(let graphQLError): // graphqlの作成に失敗した場合
                     print("Failed to create graphql \(graphQLError)")
@@ -92,6 +91,12 @@ final class ChatViewController: UIViewController {
                     self.chats.append(createdChat)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        
+                        // TODO: 過去のログを見てるときにメッセージが来たらスクロールせずに「メッセージが来てます」的な文言を出したい
+                        
+                        // 最新のメッセージまでスクロール
+                        let indexPath = IndexPath(row: self.chats.count - 1, section: 0)
+                        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                     }
                 case .failure(let error):
                     print("Got failed result with \(error.errorDescription)")
